@@ -1,6 +1,6 @@
 # VocaGame-BackendTest-Azola
 
-An example of gin contains many useful features for e-commerce websites
+NOTE: I didn't create a wallet feature, because I was working on this on day 3 and didn't have more time.
 
 ## How to run
 
@@ -75,7 +75,5 @@ make unittest
 
 ### What's next?
 
-- gRPC functions for products and orders
-- Push message to notify place order successfully
-- Payment with PayPal
+- Wallet Feature
 - Define error response wrapper
