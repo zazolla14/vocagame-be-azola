@@ -1,9 +1,4 @@
-# Go Shop
-
-[![Master](https://github.com/quangdangfit/vocagame-be-azola/workflows/master/badge.svg)](https://github.com/quangdangfit/vocagame-be-azola/actions)
-[![codecov](https://codecov.io/gh/quangdangfit/vocagame-be-azola/graph/badge.svg?token=78BO8FQDB0)](https://codecov.io/gh/quangdangfit/vocagame-be-azola)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/quangdangfit/vocagame-be-azola?style=flat-square)
-[![GitHub](https://img.shields.io/github/license/jrapoport/gothic?style=flat-square)](https://github.com/quangdangfit/vocagame-be-azola/blob/master/LICENSE)
+# VocaGame-BackendTest-Azola
 
 An example of gin contains many useful features for e-commerce websites
 
@@ -11,10 +6,9 @@ An example of gin contains many useful features for e-commerce websites
 
 ### Required Environment
 
+- Go 1.20
 - Postgres
 - Redis
-
-You can see the docker compose file [here](https://github.com/quangdangfit/docker-compose-template/blob/master/base/docker-compose.yml) to set up required environment
 
 ### Config
 
@@ -24,8 +18,8 @@ You can see the docker compose file [here](https://github.com/quangdangfit/docke
 ```yaml
 environment: production
 http_port: 8888
-auth_secret: ######
-database_uri: postgres://username:password@host:5432/database
+auth_secret: auth_secret
+database_uri: postgres://postgres:1234@postgres:5432/postgres
 redis_uri: localhost:6379
 redis_password:
 redis_db: 0
@@ -37,9 +31,12 @@ redis_db: 0
 $ go run cmd/api/main.go
 ```
 
+```docker compose
+$ docker-compose up
+```
+
 ```
 2023-09-12T15:18:36.684+0700    INFO    http/server.go:58       HTTP server is listening on PORT: 8888
-2023-09-12T15:18:36.684+0700    INFO    grpc/server.go:53       GRPC server is listening on PORT: 8889
 ```
 
 ### Test
@@ -67,7 +64,6 @@ make unittest
 ### Tech stack
 
 - Restful API
-- GRPC
 - DDD
 - Gorm
 - Swagger
@@ -75,6 +71,7 @@ make unittest
 - Jwt-Go
 - Gin-gonic
 - Redis
+- Postgres
 
 ### What's next?
 
@@ -82,8 +79,3 @@ make unittest
 - Push message to notify place order successfully
 - Payment with PayPal
 - Define error response wrapper
-
-### Donate:
-
-- Ethereum: `0x96b2F7E87786Db12121D66477e87539619aa2c97`
-- BNB Chain: `0x96b2F7E87786Db12121D66477e87539619aa2c97`
